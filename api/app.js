@@ -2,20 +2,20 @@ const express = require("express")
 const mongoose = require("mongoose")
 const cors = require("cors")
 const morgan = require("morgan")
-const {initialize} = require("./config");
-require("./helpers/cronJob");
+const {initialize} = require("../config");
+require("../helpers/cronJob");
 require("dotenv").config()
 
-const authRoutes = require("./routes/auth");
-const categoryRoutes = require("./routes/category");
-const postRoutes = require("./routes/post");
-const portfolioRoutes = require("./routes/portfolio");
-const planRoutes = require("./routes/plan");
-const orderRoute = require("./routes/order");
-const inquiryRoute = require("./routes/inquiry");
-const commentRoute = require("./routes/comment");
-const popupRoute = require("./routes/popup");
-const reviewRoute = require("./routes/review");
+const authRoutes = require("../routes/auth");
+const categoryRoutes = require("../routes/category");
+const postRoutes = require("../routes/post");
+const portfolioRoutes = require("../routes/portfolio");
+const planRoutes = require("../routes/plan");
+const orderRoute = require("../routes/order");
+const inquiryRoute = require("../routes/inquiry");
+const commentRoute = require("../routes/comment");
+const popupRoute = require("../routes/popup");
+const reviewRoute = require("../routes/review");
 
 const app = express()
 
