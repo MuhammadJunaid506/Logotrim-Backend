@@ -26,7 +26,7 @@ let ordertransporter = nodemailer.createTransport({
   secure: true, 
   auth: {
     user: process.env.SMTP_USER_ORDER, 
-    pass: process.env.SMTP_PASSWORD | "0rd#R-9632", 
+    pass: process.env.SMTP_PASSWORD_ORDER | "0rd#R-9632", 
   },
   tls: {
     rejectUnauthorized: false,
