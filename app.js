@@ -30,7 +30,12 @@ mongoose
     .then(() => initialize())
     .catch((err) => console.log(`Error while connecting to database: ${err}`));
 
-app.use(cors());
+app.use(cors({
+  origin: "*", // for testing; restrict later in production
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+}));
+app.options("*", cors());
 app.use(morgan("dev"));
 app.use(express.json());
 app.use('/uploads', express.static('./uploads'));
